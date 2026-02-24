@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>TRABALHANDO FUNÇÕES</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.5; }
+        .bloco { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        span { font-weight: bold; color: blue; }
+    </style>
+</head>
+<body>
+
+    <div class="bloco">
+        <h3> Contar Vogais</h3>
+        <input type="text" id="inpVogais" placeholder="Digite um texto">
+        <button onclick="calcVogais()">Contar</button>
+        <p>Resultado: <span id="resVogais"></span></p>
+    </div>
+
+    <div class="bloco">
+        <h3> Fatorial</h3>
+        <input type="number" id="inpFat" placeholder="Número">
+        <button onclick="calcFatorial()">Calcular</button>
+        <p>Resultado: <span id="resFat"></span></p>
+    </div>
+
+    <div class="bloco">
+        <h3> Celsius para Fahrenheit</h3>
+        <input type="number" id="inpC" placeholder="Graus Celsius">
+        <button onclick="calcTemp()">Converter</button>
+        <p>Resultado: <span id="resTemp"></span></p>
+    </div>
+
+    <div class="bloco">
+        <h3> Média (3 números)</h3>
+        <input type="number" id="n1">
+        <input type="number" id="n2">
+        <input type="number" id="n3">
+        <button onclick="calcMedia()">Calcular Média</button>
+        <p>Resultado: <span id="resMedia"></span></p>
+    </div>
+
+    <div class="bloco">
+        <h3> Apenas Pares (3 números)</h3>
+        <input type="number" id="p1">
+        <input type="number" id="p2">
+        <input type="number" id="p3">
+        <button onclick="calcPares()">Ver Pares</button>
+        <p>Resultado: <span id="resPares"></span></p>
+    </div>
+
+    <script>
+        // --- FUNÇÕES DE LÓGICA ---
+        function contarVogais(texto) {
+            const vogais = 'aeiouAEIOUáéíóúÁÉÍÓÚãõâêîôû';
+            let contador = 0;
+            for (let letra of texto) {
+                if (vogais.includes(letra)) contador++;
+            }
+            return contador;
+        }
+
+        function fatorial(n) {
+            if (n <= 1) return 1;
+            return n * fatorial(n - 1);
+        }
+
+        function cParaF(c) {
+            return (c * 9/5) + 32;
+        }
+
+        // --- FUNÇÕES QUE MOSTRAM NA TELA ---
+        function calcVogais() {
+            let txt = document.getElementById("inpVogais").value;
+            document.getElementById("resVogais").innerText = contarVogais(txt);
+        }
+
+        function calcFatorial() {
+            let n = Number(document.getElementById("inpFat").value);
+            document.getElementById("resFat").innerText = fatorial(n);
+        }
+
+        function calcTemp() {
+            let c = Number(document.getElementById("inpC").value);
+            document.getElementById("resTemp").innerText = cParaF(c) + " °F";
+        }
+
+        function calcMedia() {
+            let num1 = Number(document.getElementById("n1").value);
+            let num2 = Number(document.getElementById("n2").value);
+            let num3 = Number(document.getElementById("n3").value);
+            let media = (num1 + num2 + num3) / 3;
+            document.getElementById("resMedia").innerText = media.toFixed(2);
+        }
+
+        function calcPares() {
+            let v1 = Number(document.getElementById("p1").value);
+            let v2 = Number(document.getElementById("p2").value);
+            let v3 = Number(document.getElementById("p3").value);
+            
+            let numeros = [v1, v2, v3];
+            let pares = numeros.filter(n => n % 2 === 0);
+            
+            document.getElementById("resPares").innerText = pares.join(", ");
+        }
+    </script>
+
+</body>
+</html>

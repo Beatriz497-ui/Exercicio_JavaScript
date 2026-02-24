@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM e Eventos - JavaScript</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- Botão de interação -->
+<button onclick="mostrarMensagem()" class="bnt">Clique aqui</button>
+<div class="card">
+</div>
+
+<!-- Bloco JavaScript -->
+<script>
+    function mostrarMensagem(){
+        let nome = prompt("Digite seu nome:");
+        let idade = prompt("Digite sua idade:");
+        let email = prompt("Digite seu email:");
+        let cidade = prompt("Digite sua cidade:");
+        let profissao = prompt("Digite sua profissão:");
+
+        alert(
+            "Nome: " + nome + "\n" +
+            "Idade: " + idade + "\n" +
+            "Email: " + email + "\n" +
+            "Cidade: " + cidade + "\n" +
+            "Profissão: " + profissao
+        );
+
+        console.log("Você clicou no botão");
+    }
+    mostrarMensagem();
+</script>
+</body>
+</html>

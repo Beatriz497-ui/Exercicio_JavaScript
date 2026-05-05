@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Comparativo Completo Arrays</title>
+</head>
+<body>
+    <script>
+        let nomes = ["Alice", "Aurora", "Beatriz", "Nicoly", "Hannah", "Isabelly", "Aline", "Arthur", "Amanda", "Bruno"];
+        let nomesPalindromos = ["Ana", "Arara", "Beatriz", "Ovo", "Hannah", "Isabelly", "Aline", "Natan", "Amanda", "Bruno"];
+        let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        console.log("--- Lista Original (For) ---");
+        for (let i = 0; i < nomes.length; i++) {
+            console.log(nomes[i]);
+        }
+
+        console.log("--- Lista Original (forEach) ---");
+        nomes.forEach(element => {
+            console.log(element);
+        });
+
+        console.log("--- Apenas nomes que começam com 'A' (For) ---");
+        for (let i = 0; i < nomes.length; i++) {
+            if (nomes[i].startsWith("A")) {
+                console.log(nomes[i]);
+            }
+        }
+
+        console.log("--- Apenas nomes que começam com 'A' (forEach) ---");
+        nomes.forEach(nome => {
+            if (nome.startsWith("A")) {
+                console.log(nome);
+            }
+        });
+
+        console.log("--- Números Pares (For) ---");
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 === 0) {
+                console.log(numeros[i]);
+            }
+        }
+
+        console.log("--- Números Pares (forEach) ---");
+        numeros.forEach(numero => {
+            if (numero % 2 === 0) {
+                console.log(numero);
+            }
+        });
+
+        console.log("--- Números maiores que 5 (For) ---");
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] > 5) {
+                console.log(numeros[i]);
+            }
+        }
+
+        console.log("--- Números maiores que 5 (forEach) ---");
+        numeros.forEach(numero => {
+            if (numero > 5) {
+                console.log(numero);
+            }
+        });
+
+        console.log("--- Nomes Palíndromos (For) ---");
+        for (let i = 0; i < nomesPalindromos.length; i++) {
+            let original = nomesPalindromos[i].toLowerCase();
+            let invertido = original.split('').reverse().join('');
+            if (original === invertido) {
+                console.log(nomesPalindromos[i]);
+            }
+        }
+
+        console.log("--- Nomes Palíndromos (forEach) ---");
+        nomesPalindromos.forEach(nome => {
+            let original = nome.toLowerCase();
+            let invertido = original.split('').reverse().join('');
+            if (original === invertido) {
+                console.log(nome);
+            }
+        });
+    </script>
+</body>
+</html>

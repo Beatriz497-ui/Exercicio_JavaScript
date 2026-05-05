@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Recebendo e Criando um Array</title>
+</head>
+<body>
+
+    <!-- Bloco de JavaScript - Recebendo e Criando Arrays -->
+
+    <script>
+
+        let nomes = [];
+
+        for (let i = 0; i < 5; i++){
+            let nome = prompt("Digite o nome " + (i + 1) + ": ");
+            nomes.push(nome);
+        }
+
+        console.log("Nomes Digitados: ");
+
+        for (let i = 0; i < nomes.length; i++){
+            alert("Nome " + (i+1) + ": " + nomes[i]);
+            console.log(nomes[i]);
+        }
+
+        let nomesExibidos = "";
+        for (let i = 0; i < nomes.length; i++){
+            nomesExibidos += "Nome " + (i + 1) + ":" + nomes[i] + "\n";
+        }
+        alert(nomesExibidos);
+
+    </script>
+</body>
+</html>

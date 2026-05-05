@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios API - 1 a 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="exercicio" id="ex-1">
+        <h2>Exercício 1: Usuários </h2>
+        <ul id="lista-usuarios"></ul>
+    </section>
+
+    <section class="exercicio" id="ex-2">
+        <h2>Exercício 2: Buscar 3 Posts</h2>
+        <div id="container-posts-api" class="grid-layout"></div>
+    </section>
+
+    <section class="exercicio" id="ex-3">
+        <h2>Exercício 3: Criar Card de Post</h2>
+        <div class="form-container">
+            <input type="text" id="input-titulo" placeholder="Título do Post">
+            <textarea id="input-texto" placeholder="Conteúdo do post"></textarea>
+            <button id="btn-criar">Renderizar na Tela</button>
+        </div>
+        <div id="area-cards-criados"></div>
+    </section>
+
+    <section class="exercicio" id="ex-4">
+        <h2>Exercício 4: Botão Carregar</h2>
+        <button id="btn-trigger-api">Carregar Dados da API</button>
+        <div id="display-api-click"></div>
+    </section>
+
+    <script src="api.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+.exercicio {
+    background: #fff;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1a73e8;
+    border-bottom: 2px solid #e8eaed;
+    padding-bottom: 10px;
+}
+
+/* Exercício 2: Estilização para posts ficarem um ao lado do outro */
+.grid-layout {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Garante responsividade */
+}
+
+.card-api {
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background: #fafafa;
+}
+
+/* Exercício 3: Formulário e Cards Manuais */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.card-usuario {
+    background: #e7f3ff;
+    border: 1px solid #b2d7ff;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Botões */
+button {
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1557b0;
+}

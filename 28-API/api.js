@@ -76,16 +76,16 @@ carregarPosts2();
 
 //----------------------------------------------------------------------------
 
-async function  buscarDados(){
-    try{
-        const resposta = await fetch("https://api.exemplo.com/dados");
-        const dados = await resposta.json();
-        console.log(dados);
-    }catch(erro){
-        console.log("Erro ao buscar API");
-    }
-}
-buscarDados();
+//async function  buscarDados(){
+//   try{
+//       const resposta = await fetch("https://api.exemplo.com/dados");
+//        const dados = await resposta.json();
+//        console.log(dados);
+//    }catch(erro){
+ //       console.log("Erro ao buscar API");
+//    }
+//}
+//buscarDados();
 
 //----------------------------------------------------------------------------
 
@@ -155,3 +155,19 @@ async function atualizarParcialUsuario(){
     console.log(usuarioParcialAtualizadoResult);
 }
 atualizarParcialUsuario();
+
+//----------------------------------
+
+async function excluirUsuario(){
+    const resposta = await fetch("https://jsonplaceholder.typicode.com/users/1", {
+        method: "DELETE"
+    });
+
+    if(resposta.ok){
+        console.log("Usuário excluído com sucesso");
+    }else{
+        console.log("Erro ao excluir usuários");
+    }
+}
+excluirUsuario();
+
